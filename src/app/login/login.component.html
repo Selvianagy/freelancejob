@@ -1,0 +1,72 @@
+<form >
+                      <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start pt-3 px-3">
+                        <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                        <button type="button" class="btn btn-primary mx-1">
+                          <i class="fab fa-facebook-f"></i>
+                        </button>
+            
+                        <button type="button" class="btn btn-primary mx-1">
+                          <i class="fab fa-twitter"></i>
+                        </button>
+            
+                        <button type="button" class="btn btn-primary mx-1">
+                          <i class="fab fa-linkedin-in"></i>
+                        </button>
+                      </div>
+            
+                      <div class="divider d-flex align-items-center my-4 px-3">
+                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                      </div>
+            
+                      <div class="form-group mb-3 px-3">
+                        <label for="loginAsDropdown" class="form-label me-3">Login as</label>
+                      
+                        <div class="dropdown">
+                          <button class="btn btn-outline-primary dropdown-toggle" type="button" id="loginAsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ selectedRole || 'Select Role' }}
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="loginAsDropdown">
+                            <a class="dropdown-item" href="#" (click)="selectRole('Admin')">Admin</a>
+                            <a class="dropdown-item" href="#" (click)="selectRole('Consultant')">Consultant</a>
+                            <a class="dropdown-item" href="#" (click)="selectRole('Inventor')">Inventor</a>
+                            <a class="dropdown-item" href="#" (click)="selectRole('Technical')">Technical</a>
+                          </div>
+                        </div>
+                      </div>
+                      
+            
+                      <div class="form-outline mb-3 px-3">
+                          <label class="form-label" for="form1Example13">Email address</label>
+                        <input type="email" id="form1Example13" class="form-control form-control-lg" />
+                      </div>
+              
+                      <div class="form-outline mb-3 px-3">
+                          <label class="form-label" for="form1Example23">Password</label>
+            
+                        <input type="password" id="form1Example23" class="form-control form-control-lg" />
+                      </div>
+                      
+
+                      
+            
+                      <div class="d-flex justify-content-between align-items-center px-3">
+                        <div class="form-check mb-0">
+                          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                          <label class="form-check-label" for="form2Example3">
+                            Remember me
+                          </label>
+                        </div>
+                        <a href="#!" class="text-body">Forgot password?</a>
+                      </div>
+            
+                      <div class="text-center text-lg-start mt-4 pt-2 p-3">
+                        <button type="button" class="btn btn-primary btn-lg"
+                          style="padding-left: 2.5rem; padding-right: 2.5rem;" >Login</button>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a 
+                            class="link-danger" (click)="navigateTo('consultantregister')">Register As Consultant </a>or
+                         <a  class="link-danger" (click)="navigateTo('inventorregister')" >As Inventor </a>or
+                         <a  class="link-danger" (click)="navigateTo('technicalregister')" > As Tecnical</a>
+                        </p>
+                      </div>
+            
+                    </form>
